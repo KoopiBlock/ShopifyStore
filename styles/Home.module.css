@@ -1,0 +1,17 @@
+.json {
+    width: 50%;
+    margin: auto;
+}
+
+.productsSection {
+    margin: 2em auto;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.titleContainer {
+    text-align: center;
+    
+}

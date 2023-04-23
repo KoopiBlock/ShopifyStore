@@ -1,0 +1,88 @@
+  /*NAVBAR COMPONENT!*/
+
+  .navbar {
+    background-color: #191A19;
+    color: #fff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+
+  .logoContainer {
+    margin: 0.5em;
+    padding: 1.1em;
+  }
+
+  .logo {
+    margin: 0;
+    color: #4E9F3D;
+    cursor: pointer;
+  }
+
+
+  .linksList {
+    margin: 0 1.6em;
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .linkWrap {
+    padding: 1em;
+    cursor: pointer;
+    margin: 0.5em;
+  }
+
+  .link {
+    text-decoration: none;
+    color: #fff;
+  }
+
+  #cta {
+    color: #4E9F3D;
+    border: solid 2px #4E9F3D;
+    padding: .5em 1em;
+    border-radius: 1em;
+  }
+
+  #cta:hover {
+    color: #191A19;
+    background-color: #4E9F3D;
+    border: solid 2px #191A19;
+    transition: 0.2s;
+  }
+
+  /*MOBILE*/
+
+  .menuIcon {
+    margin: .6em 1em ;
+    font-size: 2em;
+    cursor: pointer;
+    color: #4E9F3D;
+  }
+
+  .MobileMenuContainer {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    background-color: #191A19;
+  }
+
+  .MobileLinksList {
+    list-style: none;
+    padding: 0;
+  }
+
+  .MobileLinkWrap {
+    padding: 1em;
+    cursor: pointer;
+    margin: 0.5em;
+    text-align: center ;
+    font-size: 1.4em;
+  }
+
+  .logoLink {
+    text-decoration: none;
+    color: #4E9F3D;
+  }

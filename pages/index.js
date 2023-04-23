@@ -1,6 +1,8 @@
 import Head from 'next/head'
-import Image from 'next/image'
+
 import styles from '../styles/Home.module.css'
+
+import { Navbar, Footer, Product, Header } from './components';
 
 export async function getStaticProps() {
 
@@ -12,7 +14,27 @@ export async function getStaticProps() {
     return { props: {} };
   }
 
-  const products = await res.json();
+  const data = await res.json();
+
+  const products = data.products.edges
+    .map(({ node }) => {
+      if (node.totalInventory <= 0) {
+        return false;
+      }
+
+      return {
+        id: node.id,
+        title: node.title,
+        description: node.description,
+        imageSrc: node.images.edges[0].node.src,
+        imageAlt: node.title,
+        price: node.variants.edges[0].node.priceV2.amount,
+        slug: node.handle,
+      };
+    })
+    .filter(Boolean);
+
+    
 
   return {
     props: { products },
@@ -20,6 +42,11 @@ export async function getStaticProps() {
 }
 
 export default function Home({products}) {
+
+  console.log(products.map((product) => (
+    product
+  )))
+
   return (
     <div className={styles.container}>
       <Head>
@@ -28,9 +55,25 @@ export default function Home({products}) {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Navbar />
+
       <div>
-        <p>{JSON.stringify(products, null, 2)}</p>
+        <div>
+          <Header />
+        </div>
+
+        <div className={styles.titleContainer}>
+          <h1>Our products:</h1>
+        </div>
+        <div className={styles.productsSection}>
+            {products.map((product) => (
+              <Product key={product.id} product={product} />
+            ))}
+        </div>
       </div>
+
+      <Footer />
+
     </div>
   )
 }
