@@ -1,0 +1,22 @@
+.list {
+    list-style: none;
+}
+
+.logoContainer {
+    margin-top: 0.1em;
+    font-size: 2em;
+    cursor: pointer;
+    color: #4E9F3D;
+}
+
+.buttonContainer {
+    margin-top: 2em;
+    margin-bottom: 1.5em;
+}
+
+.ctaButton {
+    
+    background-color: #4E9F3D;
+    color: #fff;
+    padding: .5em 1em;
+}

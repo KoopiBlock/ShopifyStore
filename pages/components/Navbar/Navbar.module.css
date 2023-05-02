@@ -53,6 +53,11 @@
     transition: 0.2s;
   }
 
+  .cartContainer {
+    margin: .7em 1em ;
+    
+  }
+
   /*MOBILE*/
 
   .menuIcon {

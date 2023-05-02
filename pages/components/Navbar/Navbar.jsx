@@ -3,7 +3,8 @@ import {AiOutlineClose, AiOutlineMenu} from 'react-icons/ai'
 import styles from './Navbar.module.css'
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence, delay } from 'framer-motion'
-
+import Cart from '../Cart/Cart'
+ 
 const Navbar = () => {
 
     const [screenWidth, setScreenWidth] = useState(0)
@@ -65,6 +66,9 @@ const Navbar = () => {
   return (
     <>
         <header className={styles.navbar}>
+        <div className={styles.cartContainer}>
+          <Cart />
+        </div>        
         <div className={styles.logoContainer}>  
           <h3 className={styles.logo}>
             <Link href="/" className={styles.logoLink} onClick={menuClose} >KOOPI BLOCKS</Link>
