@@ -4,15 +4,15 @@ export default async function handler(_req, res) {
     const data = await postToShopify({
         
         query: `
-        mutation CreateCart {
-            cartCreate {
-              cart {                
-                id
-                checkoutUrl
+          mutation CreateCart {
+              cartCreate {
+                cart {                
+                  id
+                  checkoutUrl
+                }
               }
             }
-          }
-        `,
+          `,
         variables: {},
       });
 

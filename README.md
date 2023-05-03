@@ -7,7 +7,7 @@ TO DO:
 code good components for the front:
 [] Code Product Page -- Daniel
 [] Code main Page -- Daniel
-[] Code Categories Component for main page with data from shopify and as 1-line menu -- Maor
+
 [] Code a search icon to navbar with actual search capability -- Deside Later
 
 for daniel:
@@ -17,6 +17,7 @@ for daniel:
 [] buy know button -- Daniel
 
 for maor:
-[] integrate cms (sanity or shopify or whatever) -- Maor
+[] integrate categories (data) from shopify -- Maor
+[] Code Categories Component for main page with data from shopify and as 1-line menu -- Maor
 [] begin uploading real products --Maor
 [] find Hebrew in shopify -- Maor

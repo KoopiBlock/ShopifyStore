@@ -25,14 +25,14 @@ const Cart = () => {
 
             if (localCartData) {
 
-                const cartObj = localCartData.cartCreate.cart
+                const cartObj = localCartData
 
-                const exsitingCart = await fetch(`/api/load-cart?cartId=${cartObj.id}`
+                const exsitingCart = await fetch(`/api/load-cart?cartId=${cartObj.cartId}`
                 ).then((res) => res.json())
 
                 setCart({
-                    id: localCartData.cartCreate.cart.id,
-                    checkoutUrl: localCartData.cartCreate.cart.checkoutUrl,
+                    id: localCartData.cartId,
+                    checkoutUrl: localCartData.checkoutUrl,
                     estimatedCost: exsitingCart.body.cart.estimatedCost.totalAmount,
                     lines: exsitingCart.body.cart.lines?.edges,
                 })
@@ -49,8 +49,8 @@ const Cart = () => {
             console.log(localCartData)
 
             setCart({
-                id: localCartData.cartCreate.cart.id,
-                checkoutUrl: localCartData.cartCreate.cart.checkoutUrl,
+                id: localCartData.cartId,
+                checkoutUrl: localCartData.checkoutUrl,
                 estimatedCost: null,
                 lines: [],
             })

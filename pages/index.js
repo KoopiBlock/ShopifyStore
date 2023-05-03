@@ -4,17 +4,27 @@ import styles from '../styles/Home.module.css'
 
 import { Navbar, Footer, Product, Header, Cart } from './components';
 
-export async function getStaticProps() {
+export async function getServerSideProps() {
 
   // to be changed, we dont want this to be seen in client side
-  const res = await fetch('http://localhost:3000/api/product');
+  const productRes = await fetch('http://localhost:3000/api/product');
+  const cartRes =  await fetch('http://localhost:3000/api/create-cart');
 
-  if (!res.ok) {
-    console.error(res);
+  
+
+  if (!productRes.ok) {
+    console.error(productRes);
     return { props: {} };
   }
 
-  const data = await res.json();
+  if (!cartRes.ok) {
+    console.error(cartRes);
+    return { props: {} };
+  }
+
+  const data = await productRes.json();
+
+  const cartData = await cartRes.json();
 
   const products = data.products.edges
     .map(({ node }) => {
@@ -38,7 +48,10 @@ export async function getStaticProps() {
     
 
   return {
-    props: { products },
+    props: { 
+      products: products,
+      cart: cartData, 
+    },
   }
 }
 
