@@ -11,6 +11,8 @@ code good components for the front:
 [] Code a search icon to navbar with actual search capability -- Deside Later
 
 for daniel:
+[v] fix cart
+[] get feedback for fix
 [] make good & responsive design -- Daniel
 [] remove item from cart function -- Daniel
 [] add quantity and ditract quantity of item in cart -- Daniel

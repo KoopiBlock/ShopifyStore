@@ -24,15 +24,17 @@ const Product = ({ product }) => {
         
         );
 
-        if (!localCartData.cartCreate.cart.id) {
+        console.log (localCartData)
+
+        if (!localCartData.cartId) {
           console.error('woops there was an error loading zi cart')
           return
         }
 
-        console.log(localCartData.cartCreate.cart.id)
+        console.log(localCartData.cartId)
         console.log(product.variantId)
 
-         const result = await fetch(`http://localhost:3000/api/add-to-cart?cartId=${localCartData.cartCreate.cart.id}&variantId=${product.variantId}`, {
+         const result = await fetch(`http://localhost:3000/api/add-to-cart?cartId=${localCartData.cartId}&variantId=${product.variantId}`, {
            method: 'POST', 
          })
 
