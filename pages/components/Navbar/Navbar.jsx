@@ -363,7 +363,7 @@ const Navbar = () => {
                     </h1>
                     <ul className={styles.cartList}>
                         {cart.lines.map(({ node: item }) => (
-                            <li className={styles.cartListItem}>
+                            <li key={item.merchandise?.id} className={styles.cartListItem}>
                               <div className={styles.productContainer}>
                                 <div>
                                   {item.merchandise?.product?.images.edges.map(({ node: image }) => (
