@@ -109,7 +109,7 @@ const Cart = () => {
                     </h1>
                     <ul className={styles.list}>
                         {cart.lines.map(({ node: item }) => (
-                            <li className={styles.listItem}>
+                            <li className={styles.listItem} key={item.merchandise?.product?.title}>
                                 <p className={styles.product}>
                                     {item.quantity} &times; {item.merchandise?.product?.title}
                                 </p>
