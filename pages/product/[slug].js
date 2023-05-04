@@ -101,7 +101,7 @@ export async function getStaticPaths() {
 
     const url = new URL(process.env.URL || 'http://localhost:3000');
     url.pathname = '/api/product';
-
+   
 
     const res = await fetch(url.toString());
     

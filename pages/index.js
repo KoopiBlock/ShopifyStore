@@ -7,8 +7,16 @@ import { Navbar, Footer, Product, Header, Cart } from './components';
 export async function getServerSideProps() {
 
   // to be changed, we dont want this to be seen in client side
-  const productRes = await fetch('http://localhost:3000/api/product');
-  const cartRes =  await fetch('http://localhost:3000/api/create-cart');
+
+  const url = new URL(process.env.URL || 'http://localhost:3000');
+  url.pathname = '/api/product';
+
+  const url2 = new URL(process.env.URL || 'http://localhost:3000');
+  url2.pathname = '/api/create-cart';
+
+
+  const productRes = await fetch(url.toString());
+  const cartRes =  await fetch(url2.toString());
 
   
 
