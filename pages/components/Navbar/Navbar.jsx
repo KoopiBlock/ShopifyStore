@@ -367,7 +367,8 @@ const Navbar = () => {
                               <div className={styles.productContainer}>
                                 <div>
                                   {item.merchandise?.product?.images.edges.map(({ node: image }) => (
-                                    <Image 
+                                    <Image
+                                      key={image.url}
                                       src={image.url}
                                       alt={'imagine'}
                                       width={100}
