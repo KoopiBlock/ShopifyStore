@@ -91,3 +91,61 @@
     text-decoration: none;
     color: #4E9F3D;
   }
+
+
+  /* CART CSS HERE!!!! */
+
+  .cartList {
+    list-style: none;
+    
+}
+
+  .cartListItem {   
+    text-decoration: none;
+    color: #fff;
+  }
+
+.cartTitle {
+  color: #fff;
+  text-decoration: underline;
+  
+  margin-top: 0;
+}
+
+.buttonContainer {
+  text-align: center;
+  background-color: #4E9F3D;
+  border-radius: .5rem;
+  
+  width: 30%;
+  margin: auto;
+ 
+}
+
+.ctaButton {
+    color: #fff;
+    padding: .5rem .5rem;
+    
+}
+
+.cartContainer {
+  margin: auto;
+  height: auto;
+  width: 100%;
+  background-color: #191A19;
+  text-align: right !important;
+  padding-bottom: 0.1em;
+}
+
+.containerCont {
+  margin-top: 2em;
+}
+
+.productContainer {
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.productsPrice {
+  
+}

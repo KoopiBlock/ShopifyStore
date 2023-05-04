@@ -116,7 +116,7 @@ const Cart = () => {
                             </li>
                         ))}
                         <li className={styles.listItem}>
-                            <p className={styles.totalPrice}>Total: {cart.estimatedCost.amount} </p>
+                            <p className={styles.totalPrice}>Total: {cart.estimatedCost?.amount} </p>
                         </li>
                     </ul>
                     <div className={styles.buttonContainer}>

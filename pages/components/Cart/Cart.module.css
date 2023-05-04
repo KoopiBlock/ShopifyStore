@@ -1,13 +1,11 @@
-.list {
+.cartList {
     list-style: none;
 }
 
-.logoContainer {
-    margin-top: 0.1em;
-    font-size: 2em;
-    cursor: pointer;
-    color: #4E9F3D;
+.cartListItem {
+    
 }
+
 
 .buttonContainer {
     margin-top: 2em;

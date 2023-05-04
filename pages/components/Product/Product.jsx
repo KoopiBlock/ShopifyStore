@@ -34,7 +34,7 @@ const Product = ({ product }) => {
         console.log(localCartData.cartId)
         console.log(product.variantId)
 
-         const result = await fetch(`http://localhost:3000/api/add-to-cart?cartId=${localCartData.cartId}&variantId=${product.variantId}`, {
+         const result = await fetch(`/api/add-to-cart?cartId=${localCartData.cartId}&variantId=${product.variantId}`, {
            method: 'POST', 
          })
 

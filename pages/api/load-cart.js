@@ -44,9 +44,19 @@ export default async function handler(_req, res) {
                   }
                   merchandise {
                     ... on ProductVariant {
+                      id
                       title
                       product {
                         title
+
+                       	images(first: 1) {
+                					edges {
+                  					node {
+                    					url
+                    					altText
+                              }
+                            }
+                          }
                       }
                       priceV2 {
                         amount
